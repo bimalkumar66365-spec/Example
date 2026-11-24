@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A role-based Academic Service Portal frontend preview.">
+  <title>AstraCampus | Academic Service Portal</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <script defer src="../javascript/common.js"></script>
+</head>
+<body class="landing-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header landing-header wrap">
+    <a class="brand" href="index.html" aria-label="AstraCampus home">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span class="brand-name">Astra<span>Campus</span></span>
+    </a>
+    <nav class="top-links" aria-label="Main navigation">
+      <a href="#workspaces">Workspaces</a>
+      <a href="#services">Services</a>
+      <a class="button button-secondary" href="login.html">Sign in <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> ACADEMIC SERVICE PORTAL · PREVIEW</p>
+        <h1>Your campus.<br><span>In sync.</span></h1>
+        <p class="hero-intro">Classes, student services and staff workflows connected in one clear campus space.</p>
+        <div class="button-row">
+          <a class="button button-primary" href="student/dashboard/index.html">Explore student portal <span aria-hidden="true">→</span></a>
+          <a class="button button-quiet" href="teacher/dashboard/index.html">Explore teacher portal</a>
+        </div>
+        <p class="safe-caption"><span aria-hidden="true">◈</span> Sample preview only · no account or backend is connected.</p>
+      </div>
+
+      <div class="hero-visual" aria-label="A glowing sample campus dashboard illustration">
+        <div class="orbital-ring"></div>
+        <div class="holo-panel">
+          <div class="holo-top"><span>ASTRA / CAMPUS GRID</span><span>DEMO NODE · 01</span></div>
+          <p class="eyebrow">WORKSPACE PREVIEW</p>
+          <div class="preview-switcher" role="tablist" aria-label="Choose a workspace preview">
+            <button type="button" role="tab" id="preview-student-tab" aria-selected="true" aria-controls="workspace-preview-grid" data-landing-role="student">Student</button>
+            <button type="button" role="tab" id="preview-teacher-tab" aria-selected="false" aria-controls="workspace-preview-grid" data-landing-role="teacher" tabindex="-1">Faculty</button>
+            <button type="button" role="tab" id="preview-employee-tab" aria-selected="false" aria-controls="workspace-preview-grid" data-landing-role="employee" tabindex="-1">Staff</button>
+          </div>
+          <h2 class="holo-title" data-preview-headline>Your week, organized.</h2>
+          <p class="holo-subtitle" data-preview-subtitle>Classes, exams, attendance and student services.</p>
+          <div class="holo-grid" id="workspace-preview-grid" role="tabpanel" aria-live="polite" aria-labelledby="preview-student-tab">
+            <div class="holo-tile" data-preview-tile><span data-preview-icon>◷</span><b data-preview-title>Timetable</b><small data-preview-detail>Classes and sessions</small></div>
+            <div class="holo-tile" data-preview-tile><span data-preview-icon>✓</span><b data-preview-title>Attendance</b><small data-preview-detail>Your semester at a glance</small></div>
+            <div class="holo-tile" data-preview-tile><span data-preview-icon>▤</span><b data-preview-title>Academic records</b><small data-preview-detail>Results and notices</small></div>
+            <div class="holo-tile" data-preview-tile><span data-preview-icon>◎</span><b data-preview-title>Student services</b><small data-preview-detail>Requests and fees</small></div>
+          </div>
+          <a class="preview-open" href="student/dashboard/index.html" data-preview-action-link><span data-preview-action-label>Explore student workspace</span><span aria-hidden="true">→</span></a>
+          <div class="signal-line" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="portal-choice-grid wrap" id="workspaces" aria-label="Choose a sample workspace">
+      <a class="portal-choice student" href="student/dashboard/index.html"><span class="role-icon">S</span><span><b>Student workspace</b><small>Classes, exams, records and services</small></span><span aria-hidden="true">↗</span></a>
+      <a class="portal-choice teacher" href="teacher/dashboard/index.html"><span class="role-icon">T</span><span><b>Teacher workspace</b><small>Teaching duties and assigned requests</small></span><span aria-hidden="true">↗</span></a>
+      <a class="portal-choice employee" href="employee/attendance/index.html"><span class="role-icon">E</span><span><b>Employee attendance</b><small>Teaching and non-teaching staff</small></span><span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="feature-rail wrap" id="services" aria-label="Portal highlights">
+      <div><span>01</span><b>Role-based paths</b><small>Each workspace shows its own modules.</small></div>
+      <div><span>02</span><b>Connected tasks</b><small>Student, teacher and staff journeys line up.</small></div>
+      <div><span>03</span><b>Clear next steps</b><small>Forms, filters and status are easy to follow.</small></div>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><span>AstraCampus · Academic Service Portal</span><span>Frontend preview · no backend connected</span></footer>
+</body>
+</html>

@@ -1,0 +1,9 @@
+/* Present/Absent controls remain legible when selected or focused. */
+.attendance-choice input:checked + span {
+  color: var(--teacher-accent);
+  font-weight: 750;
+}
+.attendance-choice label:has(input:checked) {
+  border-color: rgba(132,209,66,.5);
+  background: rgba(132,209,66,.08);
+}

@@ -1,0 +1,109 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --ink: #eff3e9;
+  --ink-soft: #c0c9b9;
+  --ink-muted: #9ba692;
+  --night: #080a08;
+  --night-deep: #050605;
+  --surface: #111611;
+  --surface-raised: #191f18;
+  --surface-hover: #242d21;
+  --line: rgba(177, 196, 160, 0.22);
+  --line-bright: rgba(132,209,66, 0.72);
+  --cyan: #84d142;
+  --blue: #9bd85c;
+  --violet: #84d142;
+  --lime: #84d142;
+  --amber: #ffc66d;
+  --rose: #ff8597;
+  --success: #84d142;
+  --danger: #ff8998;
+  --focus: #d1eb9d;
+  --radius-small: 10px;
+  --radius-medium: 17px;
+  --radius-large: 24px;
+  --shadow-deep: 0 24px 70px rgba(0, 0, 0, 0.34);
+  --shadow-glow: 0 0 34px rgba(132,209,66, 0.2);
+  --content-width: 1480px;
+  --student-accent: #84d142;
+  --teacher-accent: #84d142;
+  --employee-accent: #84d142;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html {
+  min-width: 320px;
+  background: var(--night-deep);
+  scroll-behavior: smooth;
+}
+body {
+  min-width: 320px;
+  margin: 0;
+  background: var(--night);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.55;
+  animation: page-shell-in .58s ease-out both;
+}
+main {
+  animation: main-arrive .62s cubic-bezier(.2,.7,.25,1) both;
+}
+button, input, select, textarea {
+  font: inherit;
+}
+button, a, input, select, textarea, summary {
+  -webkit-tap-highlight-color: transparent;
+}
+button, a {
+  color: inherit;
+}
+button:focus-visible, a:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+::selection {
+  background: rgba(132,209,66, 0.3);
+  color: #fff;
+}
+[hidden] {
+  display: none !important;
+}
+@keyframes page-shell-in {
+  from { opacity: .48; }
+  to { opacity: 1; }
+}
+@keyframes main-arrive {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@view-transition {
+  navigation: auto;
+}
+::view-transition-old(root) {
+  animation: page-view-out .16s ease-in both;
+}
+::view-transition-new(root) {
+  animation: page-view-in .34s cubic-bezier(.2,.7,.25,1) both;
+}
+@keyframes page-view-out {
+  to { opacity: 0; }
+}
+@keyframes page-view-in {
+  from { opacity: 0; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+    transition-duration: .01ms !important;
+    transition-delay: 0ms !important;
+  }
+}

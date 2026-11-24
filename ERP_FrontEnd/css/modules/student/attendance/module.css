@@ -1,0 +1,10 @@
+/* Subject percentages use text and a clear accent, not colour alone. */
+.attendance-value {
+  display: inline-block;
+  min-width: 48px;
+  font-family: Consolas,monospace;
+}
+body[data-module="attendance"] .data-table td:nth-child(1) {
+  color: var(--ink);
+  font-weight: 650;
+}

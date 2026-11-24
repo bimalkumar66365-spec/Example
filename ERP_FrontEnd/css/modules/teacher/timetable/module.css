@@ -1,0 +1,6 @@
+/* Teacher timetable is a view-only schedule. */
+body[data-module="timetable"] .data-table td:nth-child(2) {
+  color: var(--teacher-accent);
+  font-family: Consolas,monospace;
+  white-space: nowrap;
+}

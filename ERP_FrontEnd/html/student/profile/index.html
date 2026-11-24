@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Your student identity and academic details in one place.">
+    <title>My profile | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/student/profile/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+  </head>
+  <body class="portal-body" data-role="student" data-module="profile" data-title="My profile" data-description="Your student identity and academic details in one place.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-12">
+        <div class="profile-banner">
+          <div class="profile-avatar">
+            DS
+          </div>
+          <div>
+            <span class="status info">
+              Student account · sample
+            </span>
+            <h2>
+              Demo Student
+            </h2>
+            <p>
+              Roll number DEMO-0001
+            </p>
+          </div>
+          <span class="profile-lock">
+            READ ONLY
+          </span>
+        </div>
+        <div class="profile-grid">
+          <article>
+            <small>
+              Full name
+            </small>
+            <b>
+              Demo Student
+            </b>
+          </article>
+          <article>
+            <small>
+              Roll number
+            </small>
+            <b>
+              DEMO-0001
+            </b>
+          </article>
+          <article>
+            <small>
+              College email
+            </small>
+            <b>
+              demo.student@example.invalid
+            </b>
+          </article>
+          <article>
+            <small>
+              Department
+            </small>
+            <b>
+              Sample department
+            </b>
+          </article>
+          <article>
+            <small>
+              Semester
+            </small>
+            <b>
+              Loaded from account
+            </b>
+          </article>
+          <article>
+            <small>
+              Section
+            </small>
+            <b>
+              Loaded from account
+            </b>
+          </article>
+          <article class="span-12">
+            <small>
+              Address
+            </small>
+            <b>
+              Shown only if stored by the college
+            </b>
+          </article>
+        </div>
+        <div class="callout">
+          <span class="callout-icon">
+            i
+          </span>
+          <span>
+            Profile editing rules are not finalised, so this page is read-only.
+          </span>
+        </div>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>

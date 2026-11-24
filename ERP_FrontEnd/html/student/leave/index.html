@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Send a leave request to the Class Teacher assigned to your section.">
+    <title>Leave application | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/student/leave/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+  </head>
+  <body class="portal-body" data-role="student" data-module="leave" data-title="Leave application" data-description="Send a leave request to the Class Teacher assigned to your section.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-5">
+        <div class="card-head">
+          <div>
+            <h2>
+              New application
+            </h2>
+            <p>
+              Fields marked * are required.
+            </p>
+          </div>
+          <span class="status info">
+            Class Teacher review
+          </span>
+        </div>
+        <form class="field-stack" data-preview-form data-preview-success="Leave request preview complete. It was not submitted or saved.">
+          <label class="field">
+            Leave starts 
+            <span class="required-mark">
+              *
+            </span>
+            <input type="datetime-local" name="startDateTime" required>
+          </label>
+          <label class="field">
+            Expected return 
+            <span class="required-mark">
+              *
+            </span>
+            <input type="datetime-local" name="returnDateTime" required>
+          </label>
+          <label class="field">
+            Reason 
+            <span class="required-mark">
+              *
+            </span>
+            <textarea name="reason" maxlength="2000" required placeholder="Write the reason for your leave"></textarea>
+          </label>
+          <label class="field file-policy">
+            Supporting file 
+            <span class="field-hint">
+              Optional · upload policy pending
+            </span>
+            <input type="file" disabled aria-disabled="true">
+          </label>
+          <button class="button button-primary" type="submit">
+            Preview request
+          </button>
+          <p class="form-message" data-form-message role="status">
+          </p>
+        </form>
+      </section>
+      <section class="card module-card span-7">
+        <div class="card-head">
+          <div>
+            <h2>
+              My applications
+            </h2>
+            <p>
+              Only your requests and decision comments appear here.
+            </p>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>
+                  Reason
+                </th>
+                <th>
+                  Leave period
+                </th>
+                <th>
+                  Status
+                </th>
+                <th>
+                  Teacher comment
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Personal reason · sample
+                </td>
+                <td>
+                  Sample dates
+                </td>
+                <td>
+                  <span class="status warning">
+                    Pending
+                  </span>
+                </td>
+                <td>
+                  Waiting for assigned Class Teacher
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Sample reason
+                </td>
+                <td>
+                  Sample dates
+                </td>
+                <td>
+                  <span class="status danger">
+                    Rejected
+                  </span>
+                </td>
+                <td>
+                  Sample decision comment
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="card module-card span-12">
+        <div class="callout">
+          <span class="callout-icon">
+            i
+          </span>
+          <span>
+            Only the Class Teacher assigned to your section can decide this application. File rules are not confirmed yet.
+          </span>
+        </div>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>

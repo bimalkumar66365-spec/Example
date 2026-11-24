@@ -1,0 +1,5 @@
+/* Request history gives status and routing the same visual weight. */
+body[data-module="requests"] .data-table td:nth-child(1) {
+  color: var(--student-accent);
+  font-family: Consolas,monospace;
+}

@@ -1,0 +1,10 @@
+/* Employee view shows personal monthly records; management controls stay gated. */
+body[data-role="employee"] {
+  --accent: var(--employee-accent);
+}
+body[data-role="employee"] .metric-card strong {
+  color: var(--employee-accent);
+}
+.permission-gate {
+  border-color: rgba(255,198,109,.3);
+}

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Published grades and academic values from your college record.">
+    <title>Academic details | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/student/academic-details/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+  </head>
+  <body class="portal-body" data-role="student" data-module="academic-details" data-title="Academic details" data-description="Published grades and academic values from your college record.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              Semester record
+            </h2>
+            <p>
+              Grades and calculations come from the academic record.
+            </p>
+          </div>
+          <span class="status success">
+            Published sample
+          </span>
+        </div>
+        <div class="filter-row">
+          <label class="field">
+            Semester
+            <select data-term-filter>
+              <option value="Term 3">Term 3 · account record</option>
+              <option value="Term 2">Term 2 · account record</option>
+            </select>
+          </label>
+        </div>
+        <div class="metric-grid academic-metrics">
+          <article class="metric-card">
+            <small>
+              Selected-term SGPA
+            </small>
+            <strong>
+              8.4
+            </strong>
+            <span>
+              Sample published value
+            </span>
+          </article>
+          <article class="metric-card">
+            <small>
+              Overall CGPA
+            </small>
+            <strong>
+              8.1
+            </strong>
+            <span>
+              Sample academic record
+            </span>
+          </article>
+          <article class="metric-card">
+            <small>
+              Result status
+            </small>
+            <strong class="metric-word">
+              Published
+            </strong>
+            <span>
+              Exam Cell release
+            </span>
+          </article>
+          <article class="metric-card">
+            <small>
+              Backlog status
+            </small>
+            <strong class="metric-word">
+              1 subject
+            </strong>
+            <span>
+              From published result
+            </span>
+          </article>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>
+                  Subject
+                </th>
+                <th>
+                  Code
+                </th>
+                <th>
+                  Grade
+                </th>
+                <th>
+                  Result
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-term="Term 3">
+                <td>
+                  Object Oriented Programming
+                </td>
+                <td>
+                  CS-301
+                </td>
+                <td>
+                  A
+                </td>
+                <td>
+                  <span class="status success">
+                    Passed
+                  </span>
+                </td>
+              </tr>
+              <tr data-term="Term 3">
+                <td>
+                  Database Systems
+                </td>
+                <td>
+                  CS-302
+                </td>
+                <td>
+                  B+
+                </td>
+                <td>
+                  <span class="status success">
+                    Passed
+                  </span>
+                </td>
+              </tr>
+              <tr data-term="Term 3">
+                <td>
+                  Operating Systems
+                </td>
+                <td>
+                  CS-303
+                </td>
+                <td>
+                  A
+                </td>
+                <td>
+                  <span class="status success">
+                    Passed
+                  </span>
+                </td>
+              </tr>
+              <tr data-term="Term 2">
+                <td>
+                  Data Structures
+                </td>
+                <td>
+                  CS-201
+                </td>
+                <td>
+                  —
+                </td>
+                <td>
+                  <span class="status warning">
+                    Backlog
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>

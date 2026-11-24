@@ -1,0 +1,4 @@
+/* Leave decisions and routed requests use separate panels. */
+body[data-module="applications"] select {
+  min-width: 130px;
+}

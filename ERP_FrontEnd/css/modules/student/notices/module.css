@@ -1,0 +1,10 @@
+/* Search and notice cards stay grouped as one reading flow. */
+.filter-search {
+  max-width: 460px;
+}
+.notice-card details {
+  margin-top: 8px;
+}
+.notice-card .button {
+  margin-top: 4px;
+}

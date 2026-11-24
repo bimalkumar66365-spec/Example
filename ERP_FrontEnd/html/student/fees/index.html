@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Review pending fee records, payment history and receipt actions.">
+    <title>Fees &amp; payments | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/student/fees/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+  </head>
+  <body class="portal-body" data-role="student" data-module="fees" data-title="Fees &amp; payments" data-description="Review pending fee records, payment history and receipt actions.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              Pending fees
+            </h2>
+            <p>
+              All amounts below are sample values.
+            </p>
+          </div>
+          <span class="status warning">
+            2 items due · sample
+          </span>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>
+                  Fee type
+                </th>
+                <th>
+                  Amount
+                </th>
+                <th>
+                  Term
+                </th>
+                <th>
+                  Document
+                </th>
+                <th>
+                  Payment code
+                </th>
+                <th>
+                  Due date
+                </th>
+                <th>
+                  Action
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Academic fee
+                </td>
+                <td>
+                  ₹12,000
+                </td>
+                <td>
+                  Sample term
+                </td>
+                <td>
+                  Fee notice
+                </td>
+                <td>
+                  DEMO-FEE-001
+                </td>
+                <td>
+                  Sample due date
+                </td>
+                <td>
+                  <a class="button button-small button-primary" href="../../payment-handoff.html?type=fee&amp;code=DEMO-FEE-001">
+                    Pay now
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Library fee
+                </td>
+                <td>
+                  ₹500
+                </td>
+                <td>
+                  Sample term
+                </td>
+                <td>
+                  Fee notice
+                </td>
+                <td>
+                  DEMO-FEE-002
+                </td>
+                <td>
+                  Sample due date
+                </td>
+                <td>
+                  <a class="button button-small button-primary" href="../../payment-handoff.html?type=fee&amp;code=DEMO-FEE-002">
+                    Pay now
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              Payment history
+            </h2>
+            <p>
+              Full card or bank details are never displayed.
+            </p>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>
+                  Payment code
+                </th>
+                <th>
+                  Amount
+                </th>
+                <th>
+                  Date
+                </th>
+                <th>
+                  Method
+                </th>
+                <th>
+                  Receipt
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  DEMO-PAID-001
+                </td>
+                <td>
+                  ₹10,000
+                </td>
+                <td>
+                  Sample date
+                </td>
+                <td>
+                  Sample method
+                </td>
+                <td>
+                  <button class="button button-small button-secondary" type="button" data-preview-action="Preview only. No receipt was downloaded.">
+                    Preview receipt
+                  </button>
+                  <p class="form-message" data-form-message role="status">
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>

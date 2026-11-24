@@ -1,0 +1,19 @@
+/* Faculty home highlights current classes and assigned work. */
+body[data-role="teacher"] {
+  --accent: var(--teacher-accent);
+}
+body[data-module="dashboard"] .quick-link:hover {
+  box-shadow: 0 0 22px rgba(132,209,66,.1);
+}
+body[data-module="dashboard"] .quick-link > span {
+  display: grid;
+  width: 31px;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(132,209,66,.23);
+  border-radius: 9px;
+  background: rgba(132,209,66,.07);
+}
+body[data-module="dashboard"] .metric-card strong {
+  color: var(--teacher-accent);
+}

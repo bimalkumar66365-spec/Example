@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mark attendance only for your assigned subject and section.">
+    <title>Student attendance | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/teacher/attendance/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+  </head>
+  <body class="portal-body" data-role="teacher" data-module="attendance" data-title="Student attendance" data-description="Mark attendance only for your assigned subject and section.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              Choose an assigned session
+            </h2>
+            <p>
+              Student list and choices must come from verified assignments.
+            </p>
+          </div>
+          <span class="status warning">
+            24-hour correction window
+          </span>
+        </div>
+        <form class="field-stack" data-preview-form data-preview-success="Attendance preview complete. Nothing was saved." data-attendance-form>
+          <div class="filter-row">
+            <label class="field">
+              Subject
+              <select required>
+                <option>Object Oriented Programming · CS-301</option>
+                <option>Database Systems · CS-302</option>
+              </select>
+            </label>
+            <label class="field">
+              Term
+              <select required>
+                <option>Term 3 · assigned</option>
+                <option>Term 2 · assigned</option>
+              </select>
+            </label>
+            <label class="field">
+              Section
+              <select required>
+                <option>BCA · Section A · assigned</option>
+                <option>BCA · Section B · assigned</option>
+              </select>
+            </label>
+            <label class="field">
+              Date
+              <input type="date" required>
+            </label>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>
+                    Student
+                  </th>
+                  <th>
+                    Roll number
+                  </th>
+                  <th>
+                    Attendance status
+                  </th>
+                  <th>
+                    Correction window
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Student A
+                  </td>
+                  <td>
+                    DEMO-001
+                  </td>
+                  <td>
+                    <div class="attendance-choice" role="group" aria-label="Student A attendance">
+                      <label>
+                        <input type="radio" name="student-a" value="present" required checked>
+                        <span>
+                          Present
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" name="student-a" value="absent">
+                        <span>
+                          Absent
+                        </span>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="status success">
+                      Open
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Student B
+                  </td>
+                  <td>
+                    DEMO-002
+                  </td>
+                  <td>
+                    <div class="attendance-choice" role="group" aria-label="Student B attendance">
+                      <label>
+                        <input type="radio" name="student-b" value="present" required>
+                        <span>
+                          Present
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" name="student-b" value="absent" checked>
+                        <span>
+                          Absent
+                        </span>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="status success">
+                      Open
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Student C
+                  </td>
+                  <td>
+                    DEMO-003
+                  </td>
+                  <td>
+                    <div class="attendance-choice" role="group" aria-label="Student C attendance">
+                      <label>
+                        <input type="radio" name="student-c" value="present" required checked>
+                        <span>
+                          Present
+                        </span>
+                      </label>
+                      <label>
+                        <input type="radio" name="student-c" value="absent">
+                        <span>
+                          Absent
+                        </span>
+                      </label>
+                    </div>
+                  </td>
+                  <td>
+                    <span class="status success">
+                      Open
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button class="button button-primary" type="submit">
+            Preview save attendance
+          </button>
+          <p class="form-message" data-form-message role="status">
+          </p>
+        </form>
+        <div class="callout warning">
+          <span class="callout-icon">
+            !
+          </span>
+          <span>
+            After 24 hours, direct correction is locked. The exception process is still undecided. Teachers cannot edit another teacher's assigned session.
+          </span>
+        </div>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="See subject-wise records for semesters linked to your account.">
+    <title>Attendance | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/student/attendance/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+  </head>
+  <body class="portal-body" data-role="student" data-module="attendance" data-title="Attendance" data-description="See subject-wise records for semesters linked to your account.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              Subject attendance
+            </h2>
+            <p>
+              Percentages come from the academic record.
+            </p>
+          </div>
+          <span class="status info">
+            Account linked
+          </span>
+        </div>
+        <div class="filter-row">
+          <label class="field">
+            Semester
+            <select data-term-filter>
+              <option value="Term 3">Term 3 · from account</option>
+              <option value="Term 2">Term 2 · from account</option>
+              <option value="Term 1">Term 1 · from account</option>
+            </select>
+          </label>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>
+                  Subject
+                </th>
+                <th>
+                  Code
+                </th>
+                <th>
+                  Total classes
+                </th>
+                <th>
+                  Attended
+                </th>
+                <th>
+                  Attendance
+                </th>
+                <th>
+                  Faculty
+                </th>
+                <th>
+                  Faculty code
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-term="Term 3">
+                <td>
+                  Object Oriented Programming
+                </td>
+                <td>
+                  CS-301
+                </td>
+                <td>
+                  18
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  <span class="attendance-value">
+                    89%
+                  </span>
+                </td>
+                <td>
+                  Faculty member A
+                </td>
+                <td>
+                  FAC-DEMO-01
+                </td>
+              </tr>
+              <tr data-term="Term 3">
+                <td>
+                  Database Systems
+                </td>
+                <td>
+                  CS-302
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  13
+                </td>
+                <td>
+                  <span class="attendance-value">
+                    81%
+                  </span>
+                </td>
+                <td>
+                  Faculty member B
+                </td>
+                <td>
+                  FAC-DEMO-02
+                </td>
+              </tr>
+              <tr data-term="Term 3">
+                <td>
+                  Operating Systems
+                </td>
+                <td>
+                  CS-303
+                </td>
+                <td>
+                  20
+                </td>
+                <td>
+                  18
+                </td>
+                <td>
+                  <span class="attendance-value">
+                    90%
+                  </span>
+                </td>
+                <td>
+                  Faculty member C
+                </td>
+                <td>
+                  FAC-DEMO-03
+                </td>
+              </tr>
+              <tr data-term="Term 2">
+                <td>
+                  Data Structures
+                </td>
+                <td>
+                  CS-201
+                </td>
+                <td>
+                  18
+                </td>
+                <td>
+                  15
+                </td>
+                <td>
+                  <span class="attendance-value">
+                    83%
+                  </span>
+                </td>
+                <td>
+                  Faculty member A
+                </td>
+                <td>
+                  FAC-DEMO-01
+                </td>
+              </tr>
+              <tr data-term="Term 2">
+                <td>
+                  Discrete Mathematics
+                </td>
+                <td>
+                  CS-204
+                </td>
+                <td>
+                  16
+                </td>
+                <td>
+                  12
+                </td>
+                <td>
+                  <span class="attendance-value">
+                    75%
+                  </span>
+                </td>
+                <td>
+                  Faculty member B
+                </td>
+                <td>
+                  FAC-DEMO-02
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </template>
+    <noscript>
+      <p class="noscript-message">
+        Turn on JavaScript to use this frontend preview.
+      </p>
+    </noscript>
+  </body>
+</html>

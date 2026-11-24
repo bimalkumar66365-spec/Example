@@ -1,0 +1,9 @@
+/* Timetable rows remain easy to scan across the week. */
+body[data-module="timetable"] .data-table td:nth-child(2) {
+  color: var(--cyan);
+  font-family: Consolas,monospace;
+  white-space: nowrap;
+}
+body[data-module="timetable"] .filter-row {
+  justify-content: flex-start;
+}

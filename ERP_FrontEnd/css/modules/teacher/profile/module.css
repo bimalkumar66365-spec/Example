@@ -1,0 +1,6 @@
+/* Faculty profile is read-only until editing rules are confirmed. */
+.teacher-mark {
+  border-color: rgba(132,209,66,.4);
+  background: rgba(132,209,66,.1);
+  color: var(--teacher-accent);
+}

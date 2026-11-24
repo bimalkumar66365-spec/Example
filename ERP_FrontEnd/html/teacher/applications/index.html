@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Review only student requests assigned to you and act within your role.">
+    <title>Applications &amp; requests | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/teacher/applications/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+  </head>
+  <body class="portal-body" data-role="teacher" data-module="applications" data-title="Applications &amp; requests" data-description="Review only student requests assigned to you and act within your role.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              Leave applications for my Class Teacher section
+            </h2>
+            <p>
+              Only the assigned Class Teacher may decide these applications.
+            </p>
+          </div>
+          <span class="status warning">
+            Review needed
+          </span>
+        </div>
+        <form data-preview-form data-preview-success="Decision preview complete. No decision was saved.">
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>
+                    Student
+                  </th>
+                  <th>
+                    Leave period
+                  </th>
+                  <th>
+                    Status
+                  </th>
+                  <th>
+                    Decision
+                  </th>
+                  <th>
+                    Optional comment
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Student A · DEMO-001
+                  </td>
+                  <td>
+                    Sample start · Sample return
+                  </td>
+                  <td>
+                    <span class="status warning">
+                      Pending
+                    </span>
+                  </td>
+                  <td>
+                    <select required aria-label="Decision for Student A">
+                      <option value="">Choose decision</option>
+                      <option>Approve</option>
+                      <option>Reject</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input aria-label="Comment for Student A" placeholder="Optional comment">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Student B · DEMO-002
+                  </td>
+                  <td>
+                    Sample start · Sample return
+                  </td>
+                  <td>
+                    <span class="status warning">
+                      Pending
+                    </span>
+                  </td>
+                  <td>
+                    <select required aria-label="Decision for Student B">
+                      <option value="">Choose decision</option>
+                      <option>Approve</option>
+                      <option>Reject</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input aria-label="Comment for Student B" placeholder="Optional comment">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <button class="button button-primary" type="submit">
+            Preview decisions
+          </button>
+          <p class="form-message" data-form-message role="status">
+          </p>
+        </form>
+      </section>
+      <section class="card module-card span-7">
+        <div class="card-head">
+          <div>
+            <h2>
+              Requests assigned to me
+            </h2>
+            <p>
+              Review details, resolve within your authority, or forward.
+            </p>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>
+                  Reference
+                </th>
+                <th>
+                  Request
+                </th>
+                <th>
+                  Status
+                </th>
+                <th>
+                  Details
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  DEMO-101
+                </td>
+                <td>
+                  Exam subject question
+                </td>
+                <td>
+                  <span class="status warning">
+                    Pending
+                  </span>
+                </td>
+                <td>
+                  <details class="details-card">
+                    <summary>
+                      Open
+                    </summary>
+                    <div class="details-content">
+                      Check the student's section and request route before replying.
+                    </div>
+                  </details>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  DEMO-102
+                </td>
+                <td>
+                  Timetable question
+                </td>
+                <td>
+                  <span class="status info">
+                    Forwarded
+                  </span>
+                </td>
+                <td>
+                  <details class="details-card">
+                    <summary>
+                      Open
+                    </summary>
+                    <div class="details-content">
+                      Sample forwarding and response history.
+                    </div>
+                  </details>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="card module-card span-5">
+        <div class="card-head">
+          <div>
+            <h2>
+              Respond or forward
+            </h2>
+            <p>
+              Department route depends on the request.
+            </p>
+          </div>
+        </div>
+        <form class="field-stack" data-preview-form data-preview-success="Response preview ready. No update was sent.">
+          <label class="field">
+            Request reference 
+            <span class="required-mark">
+              *
+            </span>
+            <select required>
+              <option value="">Choose a request</option>
+              <option>DEMO-101</option>
+              <option>DEMO-102</option>
+            </select>
+          </label>
+          <label class="field">
+            Action 
+            <span class="required-mark">
+              *
+            </span>
+            <select required>
+              <option value="">Choose action</option>
+              <option>Resolve</option>
+              <option>Forward to team</option>
+            </select>
+          </label>
+          <label class="field">
+            Forward to team
+            <select>
+              <option value="">Choose if forwarding</option>
+              <option>Academic Cell</option>
+              <option>Exam Cell</option>
+              <option>Accounts Cell</option>
+              <option>Library Staff</option>
+              <option>Other relevant team</option>
+            </select>
+          </label>
+          <label class="field">
+            Response
+            <textarea maxlength="2000" placeholder="Write a reply for the student"></textarea>
+          </label>
+          <button class="button button-secondary" type="submit">
+            Preview response
+          </button>
+          <p class="form-message" data-form-message role="status">
+          </p>
+        </form>
+      </section>
+      <section class="card module-card span-12">
+        <div class="callout warning">
+          <span class="callout-icon">
+            !
+          </span>
+          <span>
+            Staff complaints do not come through this route. A student contacts a higher authority directly by college email.
+          </span>
+        </div>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment hand-off | AstraCampus</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/portal.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <script defer src="../javascript/common.js"></script>
+  <script defer src="../javascript/payment.js"></script>
+</head>
+<body class="payment-page">
+  <header class="site-header payment-header wrap"><a class="brand" href="index.html"><span class="brand-mark">A</span><span class="brand-name">Astra<span>Campus</span></span></a><span class="status info">Separate payment step</span></header>
+  <main class="payment-main">
+    <a class="payment-back" id="back-to-module" href="student/dashboard/index.html">← Back to portal</a>
+    <section class="card payment-card">
+      <div class="payment-orbit" aria-hidden="true">↗</div>
+      <p class="eyebrow">PAYMENT HAND-OFF</p>
+      <h1 id="payment-title">Review before payment</h1>
+      <p class="field-hint" id="payment-description">The college system supplies the confirmed items.</p>
+      <hr class="rule-line">
+      <h2>Items to review</h2>
+      <ul id="payment-items" class="payment-items"><li>Loading sample summary…</li></ul>
+      <div class="payment-warning"><b>No payment is connected.</b><span>This preview will not open a gateway, request card details, or charge money.</span></div>
+      <button class="button button-primary button-wide" type="button" data-preview-action="Payment service is not connected. Nothing was charged or sent.">Payment service not connected</button>
+      <p class="form-message" data-form-message role="status"></p>
+    </section>
+    <p class="field-hint">Provider, verification and receipt rules still need college approval.</p>
+  </main>
+</body>
+</html>

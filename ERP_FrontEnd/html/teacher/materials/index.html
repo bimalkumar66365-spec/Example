@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Upload materials for assigned subjects and manage only your own files.">
+    <title>Study materials | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/teacher/materials/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+  </head>
+  <body class="portal-body" data-role="teacher" data-module="materials" data-title="Study materials" data-description="Upload materials for assigned subjects and manage only your own files.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              My materials
+            </h2>
+            <p>
+              Ownership controls appear only on your own uploads.
+            </p>
+          </div>
+          <span class="status info">
+            3 material types
+          </span>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>
+                  Resource
+                </th>
+                <th>
+                  Subject
+                </th>
+                <th>
+                  Type
+                </th>
+                <th>
+                  Uploader
+                </th>
+                <th>
+                  Permission
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  OOP lecture notes · sample
+                </td>
+                <td>
+                  CS-301 · Object Oriented Programming
+                </td>
+                <td>
+                  Notes
+                </td>
+                <td>
+                  Demo Teacher · you
+                </td>
+                <td>
+                  <button class="button button-small button-secondary" type="button" data-preview-action="Preview only. No file was changed.">
+                    Manage my upload
+                  </button>
+                  <p class="form-message" data-form-message role="status">
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Database past questions · sample
+                </td>
+                <td>
+                  CS-302 · Database Systems
+                </td>
+                <td>
+                  PYQs
+                </td>
+                <td>
+                  Library Staff
+                </td>
+                <td>
+                  <span class="status info">
+                    View only
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  OS sample paper · sample
+                </td>
+                <td>
+                  CS-303 · Operating Systems
+                </td>
+                <td>
+                  Sample Papers
+                </td>
+                <td>
+                  Demo Teacher · you
+                </td>
+                <td>
+                  <button class="button button-small button-secondary" type="button" data-preview-action="Preview only. No file was changed.">
+                    Manage my upload
+                  </button>
+                  <p class="form-message" data-form-message role="status">
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              Add a resource
+            </h2>
+            <p>
+              Select an assigned subject and one of the allowed resource types.
+            </p>
+          </div>
+          <span class="status warning">
+            Upload policy pending
+          </span>
+        </div>
+        <form class="field-grid" data-preview-form data-preview-success="Resource form preview complete. The file was not uploaded.">
+          <label class="field">
+            Resource title 
+            <span class="required-mark">
+              *
+            </span>
+            <input required maxlength="160" placeholder="Enter a clear title">
+          </label>
+          <label class="field">
+            Assigned subject 
+            <span class="required-mark">
+              *
+            </span>
+            <select required>
+              <option value="">Choose an assigned subject</option>
+              <option>CS-301 · Object Oriented Programming</option>
+              <option>CS-302 · Database Systems</option>
+            </select>
+          </label>
+          <label class="field">
+            Material type 
+            <span class="required-mark">
+              *
+            </span>
+            <select required>
+              <option>Notes</option>
+              <option>PYQs</option>
+              <option>Sample Papers</option>
+            </select>
+          </label>
+          <label class="field">
+            Choose file 
+            <span class="field-hint">
+              Disabled until file rules are approved
+            </span>
+            <input type="file" disabled aria-disabled="true">
+          </label>
+          <div class="span-12">
+            <button class="button button-primary" type="submit">
+              Preview upload details
+            </button>
+            <p class="form-message" data-form-message role="status">
+            </p>
+          </div>
+        </form>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>

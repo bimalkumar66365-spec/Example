@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="View your assigned teaching schedule. The Academic Cell owns timetable changes.">
+    <title>My timetable | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/teacher/timetable/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+    <script defer src="../../../javascript/modules/teacher/timetable/index.js"></script>
+  </head>
+  <body class="portal-body" data-role="teacher" data-module="timetable" data-title="My timetable" data-description="View your assigned teaching schedule. The Academic Cell owns timetable changes.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              Teaching schedule
+            </h2>
+            <p>
+              Only sessions linked to this teacher account are shown.
+            </p>
+          </div>
+          <span class="status info">
+            Read only
+          </span>
+        </div>
+        <div class="filter-row">
+          <label class="field">
+            Day
+            <select data-day-filter>
+              <option value="TODAY">Today</option>
+              <option value="ALL">All week</option>
+              <option>Monday</option>
+              <option>Tuesday</option>
+              <option>Wednesday</option>
+              <option>Thursday</option>
+              <option>Friday</option>
+            </select>
+          </label>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>
+                  Day
+                </th>
+                <th>
+                  Time
+                </th>
+                <th>
+                  Subject
+                </th>
+                <th>
+                  Section
+                </th>
+                <th>
+                  Room
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-day="Monday">
+                <td>
+                  Monday
+                </td>
+                <td>
+                  09:00–10:00
+                </td>
+                <td>
+                  Object Oriented Programming
+                </td>
+                <td>
+                  BCA · Section A
+                </td>
+                <td>
+                  Room 204
+                </td>
+              </tr>
+              <tr data-day="Monday">
+                <td>
+                  Monday
+                </td>
+                <td>
+                  11:30–12:30
+                </td>
+                <td>
+                  Database Systems
+                </td>
+                <td>
+                  BCA · Section B
+                </td>
+                <td>
+                  Lab 2
+                </td>
+              </tr>
+              <tr data-day="Wednesday">
+                <td>
+                  Wednesday
+                </td>
+                <td>
+                  10:00–11:00
+                </td>
+                <td>
+                  Object Oriented Programming
+                </td>
+                <td>
+                  BCA · Section A
+                </td>
+                <td>
+                  Room 204
+                </td>
+              </tr>
+              <tr data-day="Friday">
+                <td>
+                  Friday
+                </td>
+                <td>
+                  13:00–14:00
+                </td>
+                <td>
+                  Database Systems
+                </td>
+                <td>
+                  BCA · Section B
+                </td>
+                <td>
+                  Lab 2
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="form-message" data-empty-state hidden>
+          No assigned classes appear for this day.
+        </p>
+        <div class="callout">
+          <span class="callout-icon">
+            i
+          </span>
+          <span>
+            Timetable changes are handled by the Academic Cell or authorised scheduling staff.
+          </span>
+        </div>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>

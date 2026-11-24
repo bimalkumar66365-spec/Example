@@ -1,0 +1,6 @@
+/* Fee actions stay in a separate payment hand-off. */
+body[data-module="fees"] .data-table td:nth-child(2) {
+  color: var(--student-accent);
+  font-weight: 750;
+  white-space: nowrap;
+}

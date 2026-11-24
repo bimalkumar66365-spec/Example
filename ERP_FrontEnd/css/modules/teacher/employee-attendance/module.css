@@ -1,0 +1,7 @@
+/* Staff attendance is separate from student attendance and gated by role. */
+.permission-gate {
+  border-color: rgba(255,198,109,.3);
+}
+body[data-module="employee-attendance"] .metric-card strong {
+  color: var(--teacher-accent);
+}

@@ -1,0 +1,7 @@
+/* Assignment cards distinguish subject work from Class Teacher duties. */
+.assignment-card {
+  min-height: 255px;
+}
+.assignment-card .text-link {
+  margin-top: 8px;
+}

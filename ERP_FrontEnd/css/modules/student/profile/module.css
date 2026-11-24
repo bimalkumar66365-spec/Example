@@ -1,0 +1,8 @@
+/* Read-only profile fields use a calm, card-based detail grid. */
+body[data-module="profile"] .profile-banner {
+  margin-bottom: 16px;
+}
+body[data-module="profile"] .profile-avatar {
+  width: 58px;
+  border-radius: 18px;
+}

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Check your classes by day. The Academic Cell maintains the official schedule.">
+    <title>Timetable | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/student/timetable/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+    <script defer src="../../../javascript/modules/student/timetable/index.js"></script>
+  </head>
+  <body class="portal-body" data-role="student" data-module="timetable" data-title="Timetable" data-description="Check your classes by day. The Academic Cell maintains the official schedule.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              This week
+            </h2>
+            <p>
+              Sample schedule for a student account.
+            </p>
+          </div>
+          <span class="status info">
+            Read only
+          </span>
+        </div>
+        <div class="filter-row">
+          <label class="field">
+            Day of week
+            <select data-day-filter>
+              <option value="TODAY">Today</option>
+              <option value="ALL">All week</option>
+              <option>Monday</option>
+              <option>Tuesday</option>
+              <option>Wednesday</option>
+              <option>Thursday</option>
+              <option>Friday</option>
+            </select>
+          </label>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>
+                  Day
+                </th>
+                <th>
+                  Time
+                </th>
+                <th>
+                  Subject
+                </th>
+                <th>
+                  Faculty
+                </th>
+                <th>
+                  Room
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-day="Monday">
+                <td>
+                  Monday
+                </td>
+                <td>
+                  09:00–10:00
+                </td>
+                <td>
+                  Object Oriented Programming
+                </td>
+                <td>
+                  Faculty member A
+                </td>
+                <td>
+                  Room 204
+                </td>
+              </tr>
+              <tr data-day="Monday">
+                <td>
+                  Monday
+                </td>
+                <td>
+                  10:15–11:15
+                </td>
+                <td>
+                  Database Systems
+                </td>
+                <td>
+                  Faculty member B
+                </td>
+                <td>
+                  Lab 2
+                </td>
+              </tr>
+              <tr data-day="Tuesday">
+                <td>
+                  Tuesday
+                </td>
+                <td>
+                  09:00–10:00
+                </td>
+                <td>
+                  Operating Systems
+                </td>
+                <td>
+                  Faculty member C
+                </td>
+                <td>
+                  Room 108
+                </td>
+              </tr>
+              <tr data-day="Wednesday">
+                <td>
+                  Wednesday
+                </td>
+                <td>
+                  11:30–12:30
+                </td>
+                <td>
+                  Computer Networks
+                </td>
+                <td>
+                  Faculty member A
+                </td>
+                <td>
+                  Room 204
+                </td>
+              </tr>
+              <tr data-day="Friday">
+                <td>
+                  Friday
+                </td>
+                <td>
+                  13:00–14:00
+                </td>
+                <td>
+                  Practical session
+                </td>
+                <td>
+                  Faculty member B
+                </td>
+                <td>
+                  Lab 1
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="form-message" data-empty-state hidden>
+          No classes are listed for this day.
+        </p>
+      </section>
+    </template>
+    <noscript>
+      <p class="noscript-message">
+        Turn on JavaScript to use this frontend preview.
+      </p>
+    </noscript>
+  </body>
+</html>

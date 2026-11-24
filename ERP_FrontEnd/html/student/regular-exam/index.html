@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Your active enrollment supplies the semester and all regular exam subjects.">
+    <title>Regular exam booking | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/student/regular-exam/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+    <script defer src="../../../javascript/modules/student/regular-exam/index.js"></script>
+  </head>
+  <body class="portal-body" data-role="student" data-module="regular-exam" data-title="Regular exam booking" data-description="Your active enrollment supplies the semester and all regular exam subjects.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-7">
+        <div class="card-head">
+          <div>
+            <h2>
+              Subjects included
+            </h2>
+            <p>
+              All subjects are linked to the active account.
+            </p>
+          </div>
+          <span class="status success">
+            4 subjects linked
+          </span>
+        </div>
+        <div class="choice-list">
+          <label class="choice-card">
+            <input type="checkbox" checked disabled>
+            <span>
+              <b>
+                Object Oriented Programming
+              </b>
+              <small>
+                Faculty member A · account linked
+              </small>
+            </span>
+            <span class="choice-code">
+              CS-301
+            </span>
+          </label>
+          <label class="choice-card">
+            <input type="checkbox" checked disabled>
+            <span>
+              <b>
+                Database Systems
+              </b>
+              <small>
+                Faculty member B · account linked
+              </small>
+            </span>
+            <span class="choice-code">
+              CS-302
+            </span>
+          </label>
+          <label class="choice-card">
+            <input type="checkbox" checked disabled>
+            <span>
+              <b>
+                Operating Systems
+              </b>
+              <small>
+                Faculty member C · account linked
+              </small>
+            </span>
+            <span class="choice-code">
+              CS-303
+            </span>
+          </label>
+          <label class="choice-card">
+            <input type="checkbox" checked disabled>
+            <span>
+              <b>
+                Computer Networks
+              </b>
+              <small>
+                Faculty member A · account linked
+              </small>
+            </span>
+            <span class="choice-code">
+              CS-304
+            </span>
+          </label>
+        </div>
+        <div class="selection-summary">
+          <div>
+            <b>
+              4 subjects included automatically
+            </b>
+            <small>
+              No semester entry or subject removal in this flow.
+            </small>
+          </div>
+          <a class="button button-primary" href="../../payment-handoff.html?type=regular">
+            Continue to payment hand-off →
+          </a>
+        </div>
+      </section>
+      <section class="card module-card span-5">
+        <div class="card-head">
+          <div>
+            <h2>
+              Report a subject issue
+            </h2>
+            <p>
+              Use this if a subject is missing or incorrect.
+            </p>
+          </div>
+        </div>
+        <form class="field-stack" data-preview-form data-preview-success="Issue preview ready. It was not sent or saved.">
+          <label class="field">
+            Affected subject 
+            <span class="required-mark">
+              *
+            </span>
+            <select name="subjectCode" data-subject-contact required>
+              <option value="">Choose a linked subject</option>
+              <option value="CS-301" data-contact="Faculty member A · faculty.a@example.invalid">CS-301 · Object Oriented Programming</option>
+              <option value="CS-302" data-contact="Faculty member B · faculty.b@example.invalid">CS-302 · Database Systems</option>
+              <option value="CS-303" data-contact="Faculty member C · faculty.c@example.invalid">CS-303 · Operating Systems</option>
+              <option value="CS-304" data-contact="Faculty member A · faculty.a@example.invalid">CS-304 · Computer Networks</option>
+            </select>
+          </label>
+          <label class="field">
+            What is wrong? 
+            <span class="required-mark">
+              *
+            </span>
+            <textarea name="issueDetails" maxlength="2000" required placeholder="Explain what is missing or incorrect"></textarea>
+          </label>
+          <div class="contact-chip">
+            <small>
+              Subject contact
+            </small>
+            <b data-contact-output>
+              Choose a subject to show contact details.
+            </b>
+          </div>
+          <button class="button button-secondary" type="submit">
+            Preview issue report
+          </button>
+          <p class="form-message" data-form-message role="status">
+          </p>
+        </form>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Find faculty by name or department and open their profile.">
+    <title>Faculty directory | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/student/faculty/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+    <script defer src="../../../javascript/modules/student/faculty/index.js"></script>
+  </head>
+  <body class="portal-body" data-role="student" data-module="faculty" data-title="Faculty directory" data-description="Find faculty by name or department and open their profile.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              Faculty directory
+            </h2>
+            <p>
+              Only college-provided profile and contact details are shown.
+            </p>
+          </div>
+          <span class="status info">
+            Sample directory
+          </span>
+        </div>
+        <div class="filter-row">
+          <label class="field">
+            Search by name or code
+            <input type="search" data-faculty-search placeholder="For example, FAC-DEMO-01">
+          </label>
+          <label class="field">
+            Department
+            <select data-faculty-department>
+              <option value="ALL">All departments</option>
+              <option>Computer Science</option>
+              <option>Mathematics</option>
+            </select>
+          </label>
+        </div>
+        <div class="faculty-grid">
+          <article class="faculty-card" data-faculty-card data-name="Faculty member A" data-department="Computer Science">
+            <div class="faculty-avatar">
+              FA
+            </div>
+            <div class="faculty-info">
+              <span class="status success">
+                Computer Science
+              </span>
+              <h3>
+                Faculty member A
+              </h3>
+              <p>
+                Faculty code FAC-DEMO-01
+              </p>
+              <details class="details-card">
+                <summary>
+                  Open profile
+                </summary>
+                <div class="details-content">
+                  Department: Computer Science
+                  <br>
+                  Office: Sample room 204
+                  <br>
+                  Email: faculty.a@example.invalid
+                </div>
+              </details>
+            </div>
+          </article>
+          <article class="faculty-card" data-faculty-card data-name="Faculty member B" data-department="Computer Science">
+            <div class="faculty-avatar">
+              FB
+            </div>
+            <div class="faculty-info">
+              <span class="status success">
+                Computer Science
+              </span>
+              <h3>
+                Faculty member B
+              </h3>
+              <p>
+                Faculty code FAC-DEMO-02
+              </p>
+              <details class="details-card">
+                <summary>
+                  Open profile
+                </summary>
+                <div class="details-content">
+                  Department: Computer Science
+                  <br>
+                  Office: Sample lab 2
+                  <br>
+                  Email: faculty.b@example.invalid
+                </div>
+              </details>
+            </div>
+          </article>
+          <article class="faculty-card" data-faculty-card data-name="Faculty member C" data-department="Mathematics">
+            <div class="faculty-avatar">
+              FC
+            </div>
+            <div class="faculty-info">
+              <span class="status info">
+                Mathematics
+              </span>
+              <h3>
+                Faculty member C
+              </h3>
+              <p>
+                Faculty code FAC-DEMO-03
+              </p>
+              <details class="details-card">
+                <summary>
+                  Open profile
+                </summary>
+                <div class="details-content">
+                  Department: Mathematics
+                  <br>
+                  Office: Sample room 108
+                  <br>
+                  Email: faculty.c@example.invalid
+                </div>
+              </details>
+            </div>
+          </article>
+        </div>
+        <p class="form-message" data-empty-state hidden>
+          No faculty match those filters.
+        </p>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>

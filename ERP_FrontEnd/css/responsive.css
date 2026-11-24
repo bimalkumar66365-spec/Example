@@ -1,0 +1,298 @@
+@media (max-width: 1100px) {
+  .portal-shell {
+    grid-template-columns: 222px minmax(0,1fr);
+  }
+  .metric-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+  .span-8, .span-7, .span-5 {
+    grid-column: span 12;
+  }
+  .span-4 {
+    grid-column: span 6;
+  }
+  .faculty-grid, .assignment-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+}
+@media (max-width: 760px) {
+  .wrap {
+    width: min(var(--content-width),calc(100% - 30px));
+  }
+  .site-header {
+    min-height: 67px;
+  }
+  .top-links {
+    gap: 9px;
+  }
+  .top-links a:not(.button) {
+    display: none;
+  }
+  .portal-shell {
+    display: block;
+    width: 100%;
+  }
+  .portal-main,
+  .portal-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .topbar {
+    width: 100%;
+  }
+  .breadcrumb {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .module-grid {
+    display: grid;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .module-grid > * {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    grid-column: 1 / -1;
+  }
+  .sidebar {
+    position: fixed;
+    z-index: 40;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: min(290px,86vw);
+    height: 100dvh;
+    transform: translateX(-105%);
+    transition: transform .22s ease;
+    box-shadow: var(--shadow-deep);
+  }
+  .sidebar.is-open {
+    transform: translateX(0);
+  }
+  .sidebar-scrim {
+    position: fixed;
+    z-index: 35;
+    inset: 0;
+    display: none;
+    border: 0;
+    background: rgba(0,0,0,.58);
+  }
+  body.menu-is-open .sidebar-scrim {
+    display: block;
+  }
+  .menu-toggle {
+    display: inline-grid;
+    width: 38px;
+    aspect-ratio: 1;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: rgba(255,255,255,.035);
+    color: var(--accent);
+    cursor: pointer;
+  }
+  .topbar {
+    justify-content: flex-start;
+    gap: 12px;
+    min-height: 62px;
+    padding-inline: 15px;
+  }
+  .breadcrumb {
+    flex: 1;
+  }
+  .user-chip small {
+    display: none;
+  }
+  .portal-content {
+    padding: 17px 14px 25px;
+  }
+  .page-heading {
+    min-height: 112px;
+    padding: 18px;
+  }
+  .heading-glyph {
+    width: 44px;
+    border-radius: 13px;
+    font-size: 20px;
+  }
+  .module-grid {
+    gap: 12px;
+  }
+  .span-4 {
+    grid-column: 1 / -1;
+  }
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+  .selection-summary {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .portal-footer {
+    flex-direction: column;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 48px;
+  }
+  .hero h1 {
+    font-size: clamp(43px,12vw,68px);
+  }
+  .hero-visual {
+    min-height: 330px;
+  }
+  .portal-choice-grid {
+    grid-template-columns: 1fr;
+  }
+  .metric-grid,
+  .quick-grid,
+  .service-grid,
+  .profile-grid,
+  .resource-grid,
+  .faculty-grid,
+  .assignment-grid {
+    grid-template-columns: minmax(0,1fr);
+  }
+  .status-list > div {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .page-heading {
+    padding-bottom: 48px;
+  }
+  .page-heading > div:first-child {
+    max-width: calc(100% - 54px);
+  }
+  .heading-aside {
+    position: absolute;
+    right: 18px;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 0;
+    text-align: right;
+  }
+  .choice-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .choice-card {
+    grid-template-columns: 19px minmax(0, 1fr);
+  }
+  .choice-trailing {
+    grid-column: 2;
+    min-width: 0;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .card-head .status {
+    white-space: normal;
+  }
+  .card-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .callout {
+    flex-wrap: wrap;
+  }
+  .callout > span:last-child {
+    flex: 1 1 calc(100% - 30px);
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
+@media (max-width: 460px) {
+  .portal-content {
+    padding-inline: 12px;
+  }
+  .demo-strip {
+    flex-wrap: wrap;
+  }
+  .choice-list,
+  .choice-card,
+  .selection-summary,
+  .callout {
+    box-sizing: border-box;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .topbar {
+    padding-inline: 12px;
+  }
+  .user-chip > span:not(.user-avatar) {
+    display: none;
+  }
+  .metric-card {
+    min-height: 99px;
+    padding: 12px;
+  }
+  .metric-card strong {
+    font-size: 20px;
+  }
+  .quick-grid,
+  .profile-grid {
+    grid-template-columns: minmax(0,1fr);
+  }
+  .choice-card {
+    gap: 9px;
+  }
+  .page-heading {
+    align-items: flex-start;
+  }
+  .card-head {
+    flex-direction: column;
+  }
+  .command-trigger {
+    width: 36px;
+    justify-content: center;
+    padding: 4px;
+  }
+  .command-trigger-label,
+  .command-trigger kbd {
+    display: none;
+  }
+  .command-dialog {
+    inset: 12px 0 auto;
+  }
+  .command-dialog-foot > span:first-child {
+    display: none;
+  }
+  .page-heading {
+    padding-bottom: 48px;
+  }
+  .heading-date {
+    font-size: 9px;
+  }
+  .heading-time {
+    font-size: 8px;
+  }
+  .heading-time time {
+    font-size: 9px;
+  }
+  .top-links .button {
+    min-height: 37px;
+    padding: 7px 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

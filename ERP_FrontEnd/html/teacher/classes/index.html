@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="See only subjects and sections assigned to your signed-in account.">
+    <title>Classes &amp; subjects | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/teacher/classes/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+  </head>
+  <body class="portal-body" data-role="teacher" data-module="classes" data-title="Classes &amp; subjects" data-description="See only subjects and sections assigned to your signed-in account.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              My teaching assignments
+            </h2>
+            <p>
+              Subject teacher and Class Teacher duties are separate permissions.
+            </p>
+          </div>
+          <span class="status info">
+            Sample assignments
+          </span>
+        </div>
+        <div class="assignment-grid">
+          <article class="assignment-card">
+            <div class="assignment-heading">
+              <span class="assignment-icon">
+                CS
+              </span>
+              <span class="status success">
+                Subject teacher
+              </span>
+            </div>
+            <h3>
+              Object Oriented Programming
+            </h3>
+            <p>
+              CS-301 · BCA · Term 3 · Section A
+            </p>
+            <div class="assignment-role">
+              <small>
+                Subject assignment
+              </small>
+              <b>
+                Attendance and marks for this subject/section
+              </b>
+            </div>
+            <div class="assignment-role class-role">
+              <small>
+                Additional role
+              </small>
+              <b>
+                Class Teacher · Section A
+              </b>
+            </div>
+            <a class="text-link" href="../attendance/index.html">
+              Open assigned attendance →
+            </a>
+          </article>
+          <article class="assignment-card">
+            <div class="assignment-heading">
+              <span class="assignment-icon">
+                DB
+              </span>
+              <span class="status success">
+                Subject teacher
+              </span>
+            </div>
+            <h3>
+              Database Systems
+            </h3>
+            <p>
+              CS-302 · BCA · Term 3 · Section B
+            </p>
+            <div class="assignment-role">
+              <small>
+                Subject assignment
+              </small>
+              <b>
+                Attendance and marks for this subject/section
+              </b>
+            </div>
+            <div class="assignment-role">
+              <small>
+                Class Teacher role
+              </small>
+              <b>
+                Not assigned for Section B
+              </b>
+            </div>
+            <p class="field-hint">
+              This subject assignment does not grant leave-decision rights for Section B.
+            </p>
+          </article>
+        </div>
+        <div class="callout">
+          <span class="callout-icon">
+            i
+          </span>
+          <span>
+            Student lists and assignment access must come from the verified teacher-subject-section records.
+          </span>
+        </div>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>

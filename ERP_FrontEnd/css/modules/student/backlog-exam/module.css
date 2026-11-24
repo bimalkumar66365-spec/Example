@@ -1,0 +1,8 @@
+/* Multi-select choices lead into a live, reviewable payment summary. */
+body[data-module="backlog-exam"] .choice-card:has(input:checked) {
+  border-color: var(--student-accent);
+  background: rgba(132,209,66,.07);
+}
+body[data-module="backlog-exam"] [data-selection-count] {
+  color: var(--student-accent);
+}

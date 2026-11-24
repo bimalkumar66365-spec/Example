@@ -1,0 +1,4 @@
+/* Notice preview actions do not expose a delete control. */
+body[data-module="notices"] .notice-list {
+  grid-template-columns: 1fr;
+}

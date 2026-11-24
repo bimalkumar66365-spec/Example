@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Enter and review marks only for your assigned subject and section.">
+    <title>Marks &amp; results | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/teacher/marks/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+  </head>
+  <body class="portal-body" data-role="teacher" data-module="marks" data-title="Marks &amp; results" data-description="Enter and review marks only for your assigned subject and section.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-8">
+        <div class="card-head">
+          <div>
+            <h2>
+              Your assessment
+            </h2>
+            <p>
+              Only your assigned class and subject can be edited.
+            </p>
+          </div>
+          <span class="status warning">
+            Draft review
+          </span>
+        </div>
+        <form class="field-stack" data-preview-form data-preview-success="Marks preview complete. No marks were saved or forwarded.">
+          <div class="filter-row">
+            <label class="field">
+              Subject
+              <select required>
+                <option>Object Oriented Programming · CS-301</option>
+                <option>Database Systems · CS-302</option>
+              </select>
+            </label>
+            <label class="field">
+              Assigned section
+              <select required>
+                <option>BCA · Section A</option>
+                <option>BCA · Section B</option>
+              </select>
+            </label>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>
+                    Student
+                  </th>
+                  <th>
+                    Roll number
+                  </th>
+                  <th>
+                    Marks / 100
+                  </th>
+                  <th>
+                    Status
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Student A
+                  </td>
+                  <td>
+                    DEMO-001
+                  </td>
+                  <td>
+                    <input class="mark-input" type="number" name="markA" min="0" max="100" required aria-label="Student A marks">
+                  </td>
+                  <td>
+                    <span class="status warning">
+                      Draft
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Student B
+                  </td>
+                  <td>
+                    DEMO-002
+                  </td>
+                  <td>
+                    <input class="mark-input" type="number" name="markB" min="0" max="100" required aria-label="Student B marks">
+                  </td>
+                  <td>
+                    <span class="status warning">
+                      Draft
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Student C
+                  </td>
+                  <td>
+                    DEMO-003
+                  </td>
+                  <td>
+                    <input class="mark-input" type="number" value="78" disabled aria-label="Student C submitted marks">
+                  </td>
+                  <td>
+                    <span class="status success">
+                      Submitted
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <details class="details-card">
+            <summary>
+              Review before forwarding
+            </summary>
+            <div class="details-content">
+              Verify the assigned subject, section, student list and values. The Exam Cell reviews forwarded marks and publishes final results.
+            </div>
+          </details>
+          <div class="inline-actions">
+            <button class="button button-secondary" type="submit">
+              Preview save draft
+            </button>
+            <button class="button button-primary" type="submit">
+              Preview forward to Exam Cell
+            </button>
+          </div>
+          <p class="form-message" data-form-message role="status">
+          </p>
+        </form>
+      </section>
+      <section class="card module-card span-4">
+        <div class="card-head">
+          <div>
+            <h2>
+              Class Teacher view
+            </h2>
+            <p>
+              Assigned section · status only
+            </p>
+          </div>
+          <span class="status info">
+            No marks shown
+          </span>
+        </div>
+        <div class="status-list">
+          <div>
+            <span>
+              Database Systems
+            </span>
+            <b class="status success">
+              Submitted
+            </b>
+          </div>
+          <div>
+            <span>
+              Computer Networks
+            </span>
+            <b class="status warning">
+              Pending
+            </b>
+          </div>
+          <div>
+            <span>
+              Mathematics
+            </span>
+            <b class="status success">
+              Submitted
+            </b>
+          </div>
+        </div>
+        <div class="callout">
+          <span class="callout-icon">
+            i
+          </span>
+          <span>
+            Class Teachers can see submission status for other subjects, not individual marks.
+          </span>
+        </div>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>

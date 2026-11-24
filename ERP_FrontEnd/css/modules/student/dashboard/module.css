@@ -1,0 +1,51 @@
+/* Student overview: welcome panel, shortcuts and campus services. */
+.student-dashboard {
+  border-color: rgba(132,209,66,.22);
+}
+.student-dashboard .welcome-grid {
+  margin-bottom: 14px;
+}
+.student-dashboard .welcome-art {
+  padding: 7px;
+  border: 0;
+  background: conic-gradient(var(--accent) 0 86%, rgba(132,209,66,.12) 86% 100%);
+  box-shadow: 0 0 0 8px rgba(132,209,66,.02), 0 0 34px rgba(132,209,66,.055);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.student-dashboard .welcome-art::before {
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(132,209,66,.2);
+  border-radius: 50%;
+  background: #0b100c;
+  content: "";
+}
+.student-dashboard .orbit-core {
+  position: relative;
+  z-index: 1;
+  width: 82px;
+  border-color: rgba(132,209,66,.22);
+  background: rgba(132,209,66,.045);
+  font-family: "Segoe UI",sans-serif;
+  font-size: 16px;
+  letter-spacing: -.04em;
+}
+.student-dashboard .orbit-dot {
+  z-index: 2;
+  animation: attendance-signal 2.8s ease-in-out infinite;
+}
+.student-dashboard .quick-link:hover {
+  box-shadow: 0 0 20px rgba(132,209,66,.08);
+}
+.student-dashboard .quick-link > span {
+  display: grid;
+  width: 31px;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(132,209,66,.2);
+  border-radius: 9px;
+  background: rgba(132,209,66,.055);
+}
+@keyframes attendance-signal {
+  50% { box-shadow: 0 0 12px color-mix(in srgb,var(--accent) 58%,transparent); transform: scale(1.12); }
+}

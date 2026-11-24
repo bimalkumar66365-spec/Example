@@ -1,0 +1,7 @@
+/* Account-linked subjects are visually locked and clearly included. */
+body[data-module="regular-exam"] .choice-card input:disabled {
+  opacity: .85;
+}
+body[data-module="regular-exam"] .selection-summary {
+  border-color: rgba(132,209,66,.36);
+}

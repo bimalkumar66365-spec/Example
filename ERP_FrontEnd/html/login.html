@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in | AstraCampus</title>
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <script defer src="../javascript/common.js"></script>
+  <script defer src="../javascript/login.js"></script>
+</head>
+<body class="auth-page">
+  <a class="skip-link" href="#login-panel">Skip to sign in</a>
+  <main class="auth-layout" id="login-panel">
+    <aside class="auth-aside">
+      <a class="brand" href="index.html"><span class="brand-mark">A</span><span class="brand-name">Astra<span>Campus</span></span></a>
+      <div><span class="auth-mark">SECURE CAMPUS ACCESS / PREVIEW</span><h1>Welcome to your campus workspace.</h1><p>Sign-in is a visual preview only. It does not authenticate an account or grant access.</p></div>
+      <a class="text-link" href="index.html">← Back to portal home</a>
+    </aside>
+    <section class="auth-card">
+      <p class="eyebrow"><span class="eyebrow-dot"></span> ACCOUNT ACCESS</p>
+      <h2>Sign in</h2>
+      <p>Use this sample form to review the sign-in design.</p>
+      <div class="demo-note"><strong>Preview only.</strong><span>Do not enter a real password. No information will be sent or saved.</span></div>
+      <form class="field-stack" data-preview-form data-preview-success="Sign-in preview complete. No account was authenticated.">
+        <label class="field">Account type<select id="account-role" name="role"><option value="STUDENT">Student</option><option value="TEACHER">Teacher</option><option value="EMPLOYEE">Employee</option></select></label>
+        <p class="field-hint" id="role-guidance" aria-live="polite"></p>
+        <label class="field">College email<input type="email" name="email" autocomplete="off" required placeholder="you@college.edu"></label>
+        <label class="field">Password<span class="password-field"><input id="login-password" type="password" name="password" autocomplete="new-password" required placeholder="Preview only"><button type="button" data-password-toggle="#login-password">Show</button></span></label>
+        <button class="button button-primary button-wide" type="submit">Preview sign in <span aria-hidden="true">→</span></button>
+        <p class="form-message" data-form-message role="status"></p>
+      </form>
+      <div class="auth-links"><span>New student?</span><a href="signup.html">Request an account</a></div>
+      <hr class="rule-line">
+      <p class="field-hint">Open a sample workspace without signing in:</p>
+      <div class="inline-actions"><a class="button button-small button-secondary" href="student/dashboard/index.html">Student</a><a class="button button-small button-secondary" href="teacher/dashboard/index.html">Teacher</a></div>
+    </section>
+  </main>
+</body>
+</html>

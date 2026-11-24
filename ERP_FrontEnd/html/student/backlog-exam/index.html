@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Choose eligible subjects from published result records.">
+    <title>Backlog exam booking | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/student/backlog-exam/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+    <script defer src="../../../javascript/modules/student/backlog-exam/index.js"></script>
+  </head>
+  <body class="portal-body" data-role="student" data-module="backlog-exam" data-title="Backlog exam booking" data-description="Choose eligible subjects from published result records.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              Select eligible subjects
+            </h2>
+            <p>
+              Eligibility is supplied by the published academic record.
+            </p>
+          </div>
+          <span class="status warning">
+            Backend eligibility required
+          </span>
+        </div>
+        <div class="callout">
+          <span class="callout-icon">
+            i
+          </span>
+          <span>
+            Only eligible backlog subjects returned by the backend should appear. Do not enter a semester or calculate eligibility here.
+          </span>
+        </div>
+        <div class="choice-list" data-backlog-list>
+          <label class="choice-card">
+            <input type="checkbox" name="backlog" value="CS-201" data-subject-name="Data Structures">
+            <span>
+              <b>
+                Data Structures
+              </b>
+              <small>
+                Term 2 · eligible sample record
+              </small>
+            </span>
+            <span class="choice-trailing">
+              <span class="choice-code">
+                CS-201
+              </span>
+              <span class="status warning">
+                Eligible
+              </span>
+            </span>
+          </label>
+          <label class="choice-card">
+            <input type="checkbox" name="backlog" value="CS-204" data-subject-name="Discrete Mathematics">
+            <span>
+              <b>
+                Discrete Mathematics
+              </b>
+              <small>
+                Term 2 · eligible sample record
+              </small>
+            </span>
+            <span class="choice-trailing">
+              <span class="choice-code">
+                CS-204
+              </span>
+              <span class="status warning">
+                Eligible
+              </span>
+            </span>
+          </label>
+          <label class="choice-card">
+            <input type="checkbox" name="backlog" value="CS-205" data-subject-name="Digital Logic">
+            <span>
+              <b>
+                Digital Logic
+              </b>
+              <small>
+                Term 2 · eligible sample record
+              </small>
+            </span>
+            <span class="choice-trailing">
+              <span class="choice-code">
+                CS-205
+              </span>
+              <span class="status warning">
+                Eligible
+              </span>
+            </span>
+          </label>
+        </div>
+        <div class="selection-summary">
+          <div>
+            <b data-selection-count>
+              0 subjects selected
+            </b>
+            <small data-selection-names>
+              Select subjects to build the final summary.
+            </small>
+          </div>
+          <button class="button button-primary" type="button" data-payment-action disabled>
+            Continue to payment hand-off →
+          </button>
+        </div>
+        <p class="form-message" data-selection-message role="status" aria-live="polite">
+        </p>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>

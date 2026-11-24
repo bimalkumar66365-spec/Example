@@ -1,0 +1,7 @@
+/* Subject marks and Class Teacher status are visually separated. */
+.mark-input {
+  border-color: rgba(132,209,66,.25);
+}
+body[data-module="marks"] .status-list > div {
+  min-height: 47px;
+}

@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="View your own payroll records and send salary questions to Accounts Cell.">
+    <title>Salary &amp; payslips | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/teacher/salary/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+    <script defer src="../../../javascript/modules/teacher/salary/index.js"></script>
+  </head>
+  <body class="portal-body" data-role="teacher" data-module="salary" data-title="Salary &amp; payslips" data-description="View your own payroll records and send salary questions to Accounts Cell.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              My salary records
+            </h2>
+            <p>
+              Payroll values are maintained by the Accounts Cell.
+            </p>
+          </div>
+          <span class="status info">
+            Private account view
+          </span>
+        </div>
+        <div class="filter-row">
+          <label class="field">
+            Year
+            <select data-salary-year>
+              <option>2026 · sample</option>
+              <option>2025 · sample</option>
+            </select>
+          </label>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>
+                  Month
+                </th>
+                <th>
+                  Gross
+                </th>
+                <th>
+                  Deductions
+                </th>
+                <th>
+                  Net
+                </th>
+                <th>
+                  Paid
+                </th>
+                <th>
+                  Method
+                </th>
+                <th>
+                  Account
+                </th>
+                <th>
+                  Reference
+                </th>
+                <th>
+                  Status
+                </th>
+                <th>
+                  Payslip
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-salary-year="2026">
+                <td>
+                  Sample month · 2026
+                </td>
+                <td>
+                  ₹52,000
+                </td>
+                <td>
+                  ₹5,000
+                </td>
+                <td>
+                  ₹47,000
+                </td>
+                <td>
+                  Sample date
+                </td>
+                <td>
+                  Bank transfer · sample
+                </td>
+                <td>
+                  •••• 1234
+                </td>
+                <td>
+                  DEMO-PAY-001
+                </td>
+                <td>
+                  <span class="status success">
+                    Credited
+                  </span>
+                </td>
+                <td>
+                  <button class="button button-small button-secondary" type="button" data-preview-action="Preview only. No payslip was downloaded.">
+                    Preview payslip
+                  </button>
+                  <p class="form-message" data-form-message role="status">
+                  </p>
+                </td>
+              </tr>
+              <tr data-salary-year="2026">
+                <td>
+                  Next sample month
+                </td>
+                <td>
+                  ₹52,000
+                </td>
+                <td>
+                  ₹5,000
+                </td>
+                <td>
+                  ₹47,000
+                </td>
+                <td>
+                  Pending
+                </td>
+                <td>
+                  Not available
+                </td>
+                <td>
+                  •••• 1234
+                </td>
+                <td>
+                  DEMO-PAY-002
+                </td>
+                <td>
+                  <span class="status warning">
+                    Processing
+                  </span>
+                </td>
+                <td>
+                  <span class="status info">
+                    Not ready
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="form-message" data-empty-state hidden>
+          No salary records for this year.
+        </p>
+      </section>
+      <section class="card module-card span-5">
+        <div class="card-head">
+          <div>
+            <h2>
+              Ask Accounts Cell
+            </h2>
+            <p>
+              Payroll questions go directly to Accounts.
+            </p>
+          </div>
+        </div>
+        <form class="field-stack" data-preview-form data-preview-success="Accounts query preview complete. Nothing was sent or saved.">
+          <label class="field">
+            Issue type 
+            <span class="required-mark">
+              *
+            </span>
+            <select name="issueType" required>
+              <option value="">Choose an issue</option>
+              <option>Payment not credited</option>
+              <option>Incorrect amount</option>
+              <option>Missing payslip</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label class="field">
+            Details 
+            <span class="required-mark">
+              *
+            </span>
+            <textarea required maxlength="2000" placeholder="Explain the payroll issue"></textarea>
+          </label>
+          <button class="button button-primary" type="submit">
+            Preview Accounts query
+          </button>
+          <p class="form-message" data-form-message role="status">
+          </p>
+        </form>
+      </section>
+      <section class="card module-card span-7">
+        <div class="card-head">
+          <div>
+            <h2>
+              Payroll query status
+            </h2>
+            <p>
+              Sample status only.
+            </p>
+          </div>
+        </div>
+        <div class="status-list">
+          <div>
+            <span>
+              DEMO-QUERY-001 · Missing payslip
+            </span>
+            <b class="status info">
+              With Accounts
+            </b>
+          </div>
+          <div>
+            <span>
+              DEMO-QUERY-002 · Payment date question
+            </span>
+            <b class="status success">
+              Answered
+            </b>
+          </div>
+        </div>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>

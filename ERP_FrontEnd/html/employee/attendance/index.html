@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="View your own monthly attendance record.">
+    <title>My employee attendance | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/employee/attendance/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+    <script defer src="../../../javascript/modules/employee/attendance/index.js"></script>
+  </head>
+  <body class="portal-body" data-role="employee" data-module="attendance" data-title="My employee attendance" data-description="View your own monthly attendance record.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              My attendance
+            </h2>
+            <p>
+              This view shows only the signed-in employee's own record.
+            </p>
+          </div>
+          <span class="status success">
+            Personal view
+          </span>
+        </div>
+        <div class="filter-row">
+          <label class="field">
+            Month
+            <select data-attendance-month>
+              <option>November</option>
+              <option>October</option>
+              <option>September</option>
+            </select>
+          </label>
+          <label class="field">
+            Year
+            <select data-attendance-year>
+              <option value="2026">2026</option>
+              <option value="2025">2025</option>
+            </select>
+          </label>
+        </div>
+        <div class="metric-grid">
+          <article class="metric-card">
+            <small>
+              Present
+            </small>
+            <strong>
+              18
+            </strong>
+            <span>
+              Sample total
+            </span>
+          </article>
+          <article class="metric-card">
+            <small>
+              Absent
+            </small>
+            <strong>
+              1
+            </strong>
+            <span>
+              Sample total
+            </span>
+          </article>
+          <article class="metric-card">
+            <small>
+              Leave
+            </small>
+            <strong>
+              2
+            </strong>
+            <span>
+              Sample total
+            </span>
+          </article>
+          <article class="metric-card">
+            <small>
+              Half day
+            </small>
+            <strong>
+              1
+            </strong>
+            <span>
+              Sample total
+            </span>
+          </article>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>
+                  Date
+                </th>
+                <th>
+                  Status
+                </th>
+                <th>
+                  Check in
+                </th>
+                <th>
+                  Check out
+                </th>
+                <th>
+                  Notes
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-month="November" data-year="2026">
+                <td>
+                  Sample day 1
+                </td>
+                <td>
+                  <span class="status success">
+                    Present
+                  </span>
+                </td>
+                <td>
+                  09:02
+                </td>
+                <td>
+                  17:05
+                </td>
+                <td>
+                  —
+                </td>
+              </tr>
+              <tr data-month="November" data-year="2026">
+                <td>
+                  Sample day 2
+                </td>
+                <td>
+                  <span class="status info">
+                    Leave
+                  </span>
+                </td>
+                <td>
+                  —
+                </td>
+                <td>
+                  —
+                </td>
+                <td>
+                  Approved leave · sample
+                </td>
+              </tr>
+              <tr data-month="November" data-year="2026">
+                <td>
+                  Sample day 3
+                </td>
+                <td>
+                  <span class="status warning">
+                    Half day
+                  </span>
+                </td>
+                <td>
+                  09:10
+                </td>
+                <td>
+                  13:15
+                </td>
+                <td>
+                  Sample note
+                </td>
+              </tr>
+              <tr data-month="October" data-year="2026">
+                <td>
+                  Sample day 4
+                </td>
+                <td>
+                  <span class="status danger">
+                    Absent
+                  </span>
+                </td>
+                <td>
+                  —
+                </td>
+                <td>
+                  —
+                </td>
+                <td>
+                  —
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="form-message" data-empty-state hidden>
+          No attendance records match this month.
+        </p>
+      </section>
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              Manage employee attendance
+            </h2>
+            <p>
+              Access remains closed until the college confirms authorised roles.
+            </p>
+          </div>
+          <span class="status warning">
+            Permission pending
+          </span>
+        </div>
+        <fieldset class="permission-gate" disabled>
+          <legend>
+            Authorised staff only
+          </legend>
+          <div class="field-grid">
+            <label class="field">
+              Find employee
+              <input type="search" placeholder="Name or employee/faculty code">
+            </label>
+            <label class="field">
+              Staff type
+              <select>
+                <option>Teaching</option>
+                <option>Non-teaching</option>
+              </select>
+            </label>
+            <label class="field">
+              Department
+              <select>
+                <option>Choose department</option>
+              </select>
+            </label>
+            <label class="field">
+              Date
+              <input type="date">
+            </label>
+          </div>
+          <button class="button button-secondary" type="button" disabled>
+            Mark attendance
+          </button>
+        </fieldset>
+        <div class="callout warning">
+          <span class="callout-icon">
+            !
+          </span>
+          <span>
+            This module covers teaching and non-teaching employees. It does not show every employee record to every teacher.
+          </span>
+        </div>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>

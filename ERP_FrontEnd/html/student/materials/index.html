@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Filter course resources by subject and material type.">
+    <title>Study materials | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/student/materials/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+    <script defer src="../../../javascript/modules/student/materials/index.js"></script>
+  </head>
+  <body class="portal-body" data-role="student" data-module="materials" data-title="Study materials" data-description="Filter course resources by subject and material type.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              Resource library
+            </h2>
+            <p>
+              Each file shows its uploader and contact details.
+            </p>
+          </div>
+          <span class="status info">
+            Uploader-owned files
+          </span>
+        </div>
+        <div class="filter-row">
+          <label class="field">
+            Subject
+            <select data-material-filter="subject">
+              <option value="ALL">All subjects</option>
+              <option value="CS-301">CS-301 · OOP</option>
+              <option value="CS-302">CS-302 · Database Systems</option>
+              <option value="CS-303">CS-303 · Operating Systems</option>
+            </select>
+          </label>
+          <label class="field">
+            Material type
+            <select data-material-filter="type">
+              <option value="ALL">All types</option>
+              <option>PYQs</option>
+              <option>Sample Papers</option>
+              <option>Notes</option>
+            </select>
+          </label>
+        </div>
+        <div class="resource-grid">
+          <article class="resource-card" data-material-card data-subject="CS-301" data-type="Notes">
+            <span class="resource-icon">
+              N
+            </span>
+            <div>
+              <span class="status success">
+                Notes
+              </span>
+              <h3>
+                OOP class notes
+              </h3>
+              <p>
+                Object Oriented Programming · CS-301
+              </p>
+              <small>
+                Uploaded by Faculty member A
+              </small>
+              <a class="resource-email">
+                faculty.a@example.invalid
+              </a>
+            </div>
+            <button class="button button-small button-secondary" type="button" data-preview-action="Preview only. No file was downloaded.">
+              Preview download
+            </button>
+            <p class="form-message" data-form-message role="status">
+            </p>
+          </article>
+          <article class="resource-card" data-material-card data-subject="CS-302" data-type="PYQs">
+            <span class="resource-icon">
+              Q
+            </span>
+            <div>
+              <span class="status warning">
+                PYQs
+              </span>
+              <h3>
+                Database past questions
+              </h3>
+              <p>
+                Database Systems · CS-302
+              </p>
+              <small>
+                Uploaded by Library Staff
+              </small>
+              <a class="resource-email">
+                library@example.invalid
+              </a>
+            </div>
+            <button class="button button-small button-secondary" type="button" data-preview-action="Preview only. No file was downloaded.">
+              Preview download
+            </button>
+            <p class="form-message" data-form-message role="status">
+            </p>
+          </article>
+          <article class="resource-card" data-material-card data-subject="CS-303" data-type="Sample Papers">
+            <span class="resource-icon">
+              S
+            </span>
+            <div>
+              <span class="status info">
+                Sample Papers
+              </span>
+              <h3>
+                Operating Systems sample paper
+              </h3>
+              <p>
+                Operating Systems · CS-303
+              </p>
+              <small>
+                Uploaded by Faculty member C
+              </small>
+              <a class="resource-email">
+                faculty.c@example.invalid
+              </a>
+            </div>
+            <button class="button button-small button-secondary" type="button" data-preview-action="Preview only. No file was downloaded.">
+              Preview download
+            </button>
+            <p class="form-message" data-form-message role="status">
+            </p>
+          </article>
+        </div>
+        <p class="form-message" data-empty-state hidden>
+          No files match those filters.
+        </p>
+        <div class="callout warning">
+          <span class="callout-icon">
+            i
+          </span>
+          <span>
+            Downloads wait for approved file links and college storage rules. Contact the uploader for a file issue.
+          </span>
+        </div>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>

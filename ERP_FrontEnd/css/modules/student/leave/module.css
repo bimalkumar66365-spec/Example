@@ -1,0 +1,7 @@
+/* Leave form and application history share the same responsive grid. */
+.file-policy {
+  border-style: dashed;
+}
+body[data-module="leave"] .form-message {
+  min-height: 18px;
+}

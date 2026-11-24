@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Updates for your account, section and department.">
+    <title>Notices | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/student/notices/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+    <script defer src="../../../javascript/modules/student/notices/index.js"></script>
+  </head>
+  <body class="portal-body" data-role="student" data-module="notices" data-title="Notices" data-description="Updates for your account, section and department.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-12">
+        <div class="card-head">
+          <div>
+            <h2>
+              Notice board
+            </h2>
+            <p>
+              Open a notice to read details and issuer contact.
+            </p>
+          </div>
+          <span class="status info">
+            3 sample notices
+          </span>
+        </div>
+        <label class="field filter-search">
+          Search notices
+          <input type="search" data-notice-search placeholder="Title, category or issuer">
+        </label>
+        <div class="notice-list" data-notice-list>
+          <article class="notice-card searchable-card">
+            <div class="notice-meta">
+              <span class="status warning">
+                Examination
+              </span>
+              <span>
+                Sample date · Assigned-term students
+              </span>
+            </div>
+            <h3>
+              Regular exam registration window
+            </h3>
+            <p>
+              Review subjects linked to your active enrollment.
+            </p>
+            <details class="details-card">
+              <summary>
+                Read full notice
+              </summary>
+              <div class="details-content">
+                The regular exam subject list is linked to active enrollment. Report a missing or incorrect subject from the Regular Exam module.
+              </div>
+            </details>
+            <div class="notice-footer">
+              Exam Cell · exam.cell@example.invalid
+            </div>
+            <button class="button button-small button-secondary" type="button" data-preview-action="Preview only. No email was sent.">
+              Contact issuer
+            </button>
+            <p class="form-message" data-form-message role="status">
+            </p>
+          </article>
+          <article class="notice-card searchable-card">
+            <div class="notice-meta">
+              <span class="status info">
+                Academic
+              </span>
+              <span>
+                Sample date · Department students
+              </span>
+            </div>
+            <h3>
+              Study resources updated
+            </h3>
+            <p>
+              New study materials are available for assigned courses.
+            </p>
+            <details class="details-card">
+              <summary>
+                Read full notice
+              </summary>
+              <div class="details-content">
+                Open Study Materials and filter by subject or type. Contact the visible uploader directly if a file needs attention.
+              </div>
+            </details>
+            <div class="notice-footer">
+              Library Staff · library@example.invalid
+            </div>
+            <button class="button button-small button-secondary" type="button" data-preview-action="Preview only. No email was sent.">
+              Contact issuer
+            </button>
+            <p class="form-message" data-form-message role="status">
+            </p>
+          </article>
+          <article class="notice-card searchable-card">
+            <div class="notice-meta">
+              <span class="status success">
+                Department
+              </span>
+              <span>
+                Sample date · Section A students
+              </span>
+            </div>
+            <h3>
+              Department class meeting
+            </h3>
+            <p>
+              Check your timetable before the meeting.
+            </p>
+            <details class="details-card">
+              <summary>
+                Read full notice
+              </summary>
+              <div class="details-content">
+                This is sample notice content. Real audience and contact details come from the college system.
+              </div>
+            </details>
+            <div class="notice-footer">
+              Faculty member A · faculty.a@example.invalid
+            </div>
+            <button class="button button-small button-secondary" type="button" data-preview-action="Preview only. No email was sent.">
+              Contact issuer
+            </button>
+            <p class="form-message" data-form-message role="status">
+            </p>
+          </article>
+        </div>
+        <p class="form-message" data-empty-state hidden>
+          No notices match this search.
+        </p>
+      </section>
+    </template>
+    <noscript>
+      <p class="noscript-message">
+        Turn on JavaScript to use this frontend preview.
+      </p>
+    </noscript>
+  </body>
+</html>

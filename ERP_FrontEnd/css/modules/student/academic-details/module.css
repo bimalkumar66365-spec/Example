@@ -1,0 +1,7 @@
+/* Published result metrics stay compact above the semester record. */
+.academic-metrics {
+  margin: 4px 0 16px;
+}
+.academic-metrics .metric-card {
+  min-height: 100px;
+}

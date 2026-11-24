@@ -1,0 +1,7 @@
+/* Teacher upload form visibly marks the file policy as pending. */
+body[data-module="materials"] .file-policy {
+  border-color: rgba(255,198,109,.28);
+}
+body[data-module="materials"] table {
+  min-width: 720px;
+}

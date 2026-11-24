@@ -1,0 +1,7 @@
+/* Faculty cards separate identity from expandable contact details. */
+.faculty-card {
+  min-height: 150px;
+}
+.faculty-info .details-card {
+  margin-top: 10px;
+}

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Publish notices for the sections you are assigned to teach.">
+    <title>Class notices | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/teacher/notices/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+  </head>
+  <body class="portal-body" data-role="teacher" data-module="notices" data-title="Class notices" data-description="Publish notices for the sections you are assigned to teach.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-5">
+        <div class="card-head">
+          <div>
+            <h2>
+              Write a notice
+            </h2>
+            <p>
+              Audience options are limited to your assigned classes.
+            </p>
+          </div>
+        </div>
+        <form class="field-stack" data-preview-form data-preview-success="Notice preview ready. It was not published or saved.">
+          <label class="field">
+            Title 
+            <span class="required-mark">
+              *
+            </span>
+            <input name="noticeTitle" maxlength="160" required placeholder="Notice title">
+          </label>
+          <label class="field">
+            Message 
+            <span class="required-mark">
+              *
+            </span>
+            <textarea name="noticeMessage" maxlength="5000" required placeholder="Write the full notice"></textarea>
+          </label>
+          <label class="field">
+            Publish to 
+            <span class="required-mark">
+              *
+            </span>
+            <select name="audience" required>
+              <option value="">Choose an assigned section</option>
+              <option>BCA · Section A · assigned</option>
+              <option>BCA · Section B · assigned</option>
+            </select>
+          </label>
+          <button class="button button-primary" type="submit">
+            Preview publish
+          </button>
+          <p class="form-message" data-form-message role="status">
+          </p>
+        </form>
+      </section>
+      <section class="card module-card span-7">
+        <div class="card-head">
+          <div>
+            <h2>
+              Published by me
+            </h2>
+            <p>
+              Teachers cannot delete published notices.
+            </p>
+          </div>
+          <span class="status info">
+            2 samples
+          </span>
+        </div>
+        <div class="notice-list">
+          <article class="notice-card">
+            <div class="notice-meta">
+              <span class="status success">
+                Published
+              </span>
+              <span>
+                Section A · sample date
+              </span>
+            </div>
+            <h3>
+              Sample class reminder
+            </h3>
+            <p>
+              Review the reading list before the next session.
+            </p>
+          </article>
+          <article class="notice-card">
+            <div class="notice-meta">
+              <span class="status success">
+                Published
+              </span>
+              <span>
+                Section B · sample date
+              </span>
+            </div>
+            <h3>
+              Sample reading update
+            </h3>
+            <p>
+              New course material is available in the student portal.
+            </p>
+          </article>
+        </div>
+        <div class="callout warning">
+          <span class="callout-icon">
+            !
+          </span>
+          <span>
+            Editing rules for published notices are still undecided. No delete control is shown.
+          </span>
+        </div>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>

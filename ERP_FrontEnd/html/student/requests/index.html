@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Raise an academic or service request and follow its status.">
+    <title>Requests &amp; issue reports | AstraCampus</title>
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/portal.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/modules/student/requests/module.css">
+    <script defer src="../../../javascript/modules/shared/portal-shell.js"></script>
+    <script defer src="../../../javascript/common.js"></script>
+  </head>
+  <body class="portal-body" data-role="student" data-module="requests" data-title="Requests &amp; issue reports" data-description="Raise an academic or service request and follow its status.">
+    <a class="skip-link" href="#main-content">
+      Skip to content
+    </a>
+    <div id="app-root">
+      <p class="loading-state">
+        Opening preview…
+      </p>
+    </div>
+    <template id="module-content-template">
+      <section class="card module-card span-5">
+        <div class="card-head">
+          <div>
+            <h2>
+              New request
+            </h2>
+            <p>
+              Categories and final routing follow college rules.
+            </p>
+          </div>
+        </div>
+        <form class="field-stack" data-preview-form data-preview-success="Request preview complete. No request was sent or saved.">
+          <label class="field">
+            Request category 
+            <span class="required-mark">
+              *
+            </span>
+            <select name="category" required>
+              <option value="">Choose a category</option>
+              <option>Academic question · sample</option>
+              <option>Exam or subject issue · sample</option>
+              <option>College service request · sample</option>
+              <option>Other · sample</option>
+            </select>
+          </label>
+          <label class="field">
+            Description 
+            <span class="required-mark">
+              *
+            </span>
+            <textarea name="details" maxlength="3000" required placeholder="Explain what you need help with"></textarea>
+          </label>
+          <button class="button button-primary" type="submit">
+            Preview request
+          </button>
+          <p class="form-message" data-form-message role="status">
+          </p>
+        </form>
+      </section>
+      <section class="card module-card span-7">
+        <div class="card-head">
+          <div>
+            <h2>
+              Current and past requests
+            </h2>
+            <p>
+              The assigned Class Teacher reviews ordinary requests first.
+            </p>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>
+                  Reference
+                </th>
+                <th>
+                  Category
+                </th>
+                <th>
+                  Status
+                </th>
+                <th>
+                  Response
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  DEMO-001
+                </td>
+                <td>
+                  Academic question
+                </td>
+                <td>
+                  <span class="status warning">
+                    Pending
+                  </span>
+                </td>
+                <td>
+                  Awaiting Class Teacher review
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  DEMO-002
+                </td>
+                <td>
+                  College service
+                </td>
+                <td>
+                  <span class="status info">
+                    Forwarded
+                  </span>
+                </td>
+                <td>
+                  Sent to the relevant college team
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="card module-card span-12">
+        <div class="callout warning">
+          <span class="callout-icon">
+            !
+          </span>
+          <span>
+            Complaints against a Class Teacher or staff member go directly to a higher authority through college email. This preview has no in-portal staff-complaint flow.
+          </span>
+        </div>
+      </section>
+    </template>
+    <noscript>
+      <p>
+        Turn on JavaScript to use this preview.
+      </p>
+    </noscript>
+  </body>
+</html>
